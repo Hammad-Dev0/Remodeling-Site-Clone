@@ -1,0 +1,273 @@
+/* universal selector */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+/* Navbar container */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 25px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+#logo a {
+  font-size: 22px;
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+/* Navbar links - desktop */
+#nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#nav-links li a:hover {
+  color: #a26028;
+}
+
+/* Hamburger - hidden on desktop */
+#hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+  #nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* hidden initially */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+  }
+
+  #nav-links li {
+    margin: 10px 0;
+  }
+
+  #hamburger {
+    display: block; /* show hamburger */
+  }
+
+  /* Show menu when toggled */
+  #nav-links.show {
+    display: flex;
+  }
+}
+
+/* main  */
+
+
+/* ------------------ MAIN STYLES ------------------ */
+/* 
+
+/* ------------------ MAIN STYLES ------------------ */
+
+#main-heading{
+    text-align: center;
+    margin-top: 130px;
+    font-size: 40px;
+}
+
+#main-para{
+    text-align: center;
+    color:#1e1e1e;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+#img-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.one img{
+    height: 282px;
+    width: 283px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 150px;
+}
+
+.one img:hover{
+    transition: 1s;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
+
+
+#footer{
+  height: 50vh;
+  background-color: #1e1e1e;
+}
+#footer h2{
+  text-align: center;
+  padding-top: 40px;
+  color:#dbdbdb;
+  font-size: 30px;
+}
+#footer button{
+  margin-left: 43%;
+  margin-top: 100px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* ================================
+   RESPONSIVE MEDIA QUERIES
+================================ */
+
+/* 1024px and below (large tablets, small laptops) */
+@media (max-width: 1024px) {
+  #footer {
+    height: auto;
+    padding-bottom: 50px;
+  }
+  #footer h2 {
+    font-size: 26px;
+  }
+  #footer button {
+    margin-left: 40%;
+  }
+}
+
+/* 768px and below (tablets) */
+@media (max-width: 768px) {
+  #footer h2 {
+    font-size: 24px;
+  }
+  #footer button {
+    margin-left: 35%;
+  }
+}
+
+/* 576px and below (large phones) */
+@media (max-width: 576px) {
+  #footer {
+    height: auto;
+  }
+  #footer h2 {
+    font-size: 22px;
+  }
+  #footer button {
+    margin-left: 30%;
+    width: 140px;
+  }
+}
+
+/* 400px and below (small phones) */
+@media (max-width: 400px) {
+  #footer h2 {
+    font-size: 20px;
+  }
+  #footer button {
+    margin-left: 25%;
+    width: 130px;
+  }
+}
+
+
+#footer-line{
+  display: flex;
+  margin-top: 100px;
+  gap: 499px;
+}
+
+#footer-para{
+  margin-left: 30px;
+}
+#footer-para span{
+  color:#a26028;
+}
+#icon i{
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 70px;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES (ALL IN ONE)
+========================================= */
+
+/* 1024px and below (laptops + large tablets) */
+@media (max-width: 1024px) {
+  #footer-line {
+    gap: 250px;
+  }
+  #icon i {
+    font-size: 18px;
+  }
+}
+
+/* 768px and below (tablets) */
+@media (max-width: 768px) {
+  #footer-line {
+    gap: 120px;
+  }
+  #footer-para {
+    margin-left: 10px;
+  }
+  #icon i {
+    font-size: 18px;
+  }
+}
+
+/* 576px and below (mobile phones) */
+@media (max-width: 576px) {
+  #footer-line {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  #footer-para {
+    margin-left: 0;
+  }
+  #icon {
+    margin-bottom: 40px;
+  }
+  #icon i {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+
+/* 400px and below (small phones) */
+@media (max-width: 400px) {
+  #footer-line {
+    gap: 15px;
+  }
+  #icon i {
+    font-size: 18px;
+  }
+}
